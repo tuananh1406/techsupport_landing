@@ -1,7 +1,7 @@
 "use client";
 
 import Header from "@/components/header";
-// import Hero from "@/components/hero";
+import Hero from "@/components/hero";
 import TrustedBrands from "@/components/trusted-brands";
 import HowItWorks from "@/components/how-it-works";
 import Features from "@/components/features";
@@ -11,14 +11,14 @@ import FAQ from "@/components/faq";
 import CallToAction from "@/components/call-to-action";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
-import SliderHero from "@/components/slider-hero";
+// import SliderHero from "@/components/slider-hero";
 
 export default function Page() {
   return (
     <div className="min-h-screen">
       <Header />
-      {/* <Hero /> */}
-      <SliderHero />
+      <Hero />
+      {/* <SliderHero /> */}
       <TrustedBrands />
       <HowItWorks />
       <Features />

@@ -11,6 +11,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // output: "export",
+  distDir: "dist",
+  productionBrowserSourceMaps: false,
   // turbopack: {
   //   root: path.join(__dirname, ".."),
   // },

@@ -114,7 +114,7 @@ const Header = () => {
           "container mx-auto px-6 flex items-center justify-between",
         )}
       >
-        {mounted && resolvedTheme === "dark" ? (
+        {mounted && resolvedTheme === "light" ? (
           <DarkLogoImage />
         ) : (
           <LightLogoImage />
