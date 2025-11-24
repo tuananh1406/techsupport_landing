@@ -16,7 +16,13 @@ import { Button } from "@/components/ui/button";
 import { DarkLogoImage, LightLogoImage } from "@/components/logo-image";
 
 const Header = () => {
-  const navItems = ["Home", "Features", "Pricing", "FAQ", "Contact"];
+  const navItems = [
+    "Trang chủ",
+    "Dịch vụ",
+    "Giá cả",
+    "Câu hỏi thường gặp",
+    "Liên hệ",
+  ];
 
   const { resolvedTheme, setTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
