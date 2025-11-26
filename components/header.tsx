@@ -18,12 +18,13 @@ import { DarkLogoImage, LightLogoImage } from "@/components/logo-image";
 const Header = () => {
   const navLabels = [
     "Trang chủ",
+    "Điểm khác biệt",
     "Dịch vụ",
     "Giá cả",
     "Câu hỏi thường gặp",
     "Liên hệ",
   ];
-  const navItems = ["Home", "Features", "Pricing", "FAQ", "Contact"];
+  const navItems = ["Home", "why-us", "Features", "Pricing", "FAQ", "Contact"];
 
   const { resolvedTheme, setTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -46,13 +47,7 @@ const Header = () => {
       }
 
       // Track active section based on scroll position
-      const sections = [
-        "features",
-        "how-it-works",
-        "pricing",
-        "faq",
-        "contact",
-      ];
+      const sections = ["features", "why-us", "pricing", "faq", "contact"];
       const scrollPosition = window.scrollY + 200;
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -97,6 +92,7 @@ const Header = () => {
   const isActiveItem = (item: string) => {
     const sectionMap: { [key: string]: string } = {
       Home: "home",
+      WhyUs: "why-us",
       Features: "features",
       Pricing: "pricing",
       FAQ: "faq",

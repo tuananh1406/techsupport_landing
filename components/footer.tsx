@@ -1,21 +1,20 @@
-
-import { motion } from 'framer-motion';
-import { Github, X, Linkedin, Mail } from 'lucide-react';
-import { Separator } from '@/components/ui/separator';
-import Logo from '@/components/logo';
+import { motion } from "framer-motion";
+import { Github, X, Linkedin, Mail } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
+import Logo from "@/components/logo";
 
 const Footer = () => {
   const links = {
-    product: ['Features', 'Pricing', 'API', 'Documentation'],
-    company: ['About', 'Blog', 'Careers', 'Contact'],
-    support: ['Help Center', 'Community', 'Status', 'Security']
+    product: ["Features", "Pricing", "API", "Documentation"],
+    company: ["About", "Blog", "Careers", "Contact"],
+    support: ["Help Center", "Community", "Status", "Security"],
   };
 
   const socialLinks = [
-    { icon: X, href: '#', label: 'X (Twitter)' },
-    { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Mail, href: '#', label: 'Email' }
+    { icon: X, href: "#", label: "X (Twitter)" },
+    { icon: Github, href: "#", label: "GitHub" },
+    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Mail, href: "#", label: "Email" },
   ];
 
   return (
@@ -34,7 +33,8 @@ const Footer = () => {
                 <Logo />
               </div>
               <p className="text-muted-foreground mb-6 max-w-sm">
-                Transform your business with our powerful SaaS platform. Scale faster, work smarter, grow bigger.
+                Transform your business with our powerful SaaS platform. Scale
+                faster, work smarter, grow bigger.
               </p>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
@@ -64,7 +64,9 @@ const Footer = () => {
                   transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <h3 className="font-medium text-base mb-4 capitalize text-muted-foreground/80">{category}</h3>
+                  <h3 className="font-medium text-base mb-4 capitalize text-muted-foreground/80">
+                    {category}
+                  </h3>
                   <ul className="text-base space-y-2">
                     {items.map((item, index) => (
                       <li key={index}>
@@ -82,15 +84,23 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
+
         <Separator className="my-6 bg-border/50" />
 
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm">
-            © 2025 Metronic SaaS. All rights reserved.
+            © 2025 Techsupport. All rights reserved.
           </p>
           <p className="text-muted-foreground text-sm mt-4 md:mt-0">
-            Product by <a href="https://keenthemes.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-indigo-600 hover:underline">KeenThemes</a>
+            Product by{" "}
+            <a
+              href="https://keenthemes.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground hover:text-indigo-600 hover:underline"
+            >
+              KeenThemes
+            </a>
           </p>
         </div>
       </div>
