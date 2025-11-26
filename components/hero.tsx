@@ -6,8 +6,6 @@ import { WordRotate } from "@/components/magicui/word-rotate";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
-import { Star } from "@/components/custom/star";
 
 const Hero = () => {
   const { resolvedTheme } = useTheme();
@@ -17,66 +15,7 @@ const Hero = () => {
     "Tạo Website hoàn hảo",
     "Tối ưu Marketing",
     "Hosting tốc độ cao",
-    "Ổn định 24/7",
-  ];
-
-  const people = [
-    {
-      id: 1,
-      name: "John Doe",
-      designation: "Software Engineer",
-      image:
-        "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
-    },
-    {
-      id: 2,
-      name: "Robert Johnson",
-      designation: "Product Manager",
-      image:
-        "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    {
-      id: 3,
-      name: "Jane Smith",
-      designation: "Data Scientist",
-      image:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    {
-      id: 4,
-      name: "Emily Davis",
-      designation: "UX Designer",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    {
-      id: 8,
-      name: "Ana Smith",
-      designation: "Marketing Head",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    {
-      id: 5,
-      name: "Tyler Durden",
-      designation: "Soap Developer",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
-    },
-    {
-      id: 6,
-      name: "Dora",
-      designation: "The Explorer",
-      image:
-        "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3534&q=80",
-    },
-    {
-      id: 7,
-      name: "Eric Johnson",
-      designation: "Software Engineer",
-      image:
-        "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
-    },
+    "Hỗ trợ 24/7",
   ];
 
   // Mouse parallax state
@@ -247,8 +186,8 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-base md:text-xl text-muted-foreground mb-6 md:mb-10 max-w-[600px] mx-auto leading-relaxed"
           >
-            Kiến tạo Website hoàn hảo, tối ưu cho mọi xu thế Marketing. Đảm bảo
-            hiệu suất vượt trội và vận hành ổn định 24/7.
+            Tạo Website hoàn hảo, tối ưu cho mọi xu thế Marketing. Đảm bảo hiệu
+            suất vượt trội và vận hành ổn định.
           </motion.p>
 
           <motion.div
@@ -260,9 +199,12 @@ const Hero = () => {
             <Button
               size="lg"
               className="cursor-pointer hover:[&_svg]:translate-x-1 w-46"
+              asChild
             >
-              Khám phá ngay
-              <ArrowRight className="h-5 w-5 transition-transform" />
+              <Link href="#contact">
+                Liên hệ
+                <ArrowRight className="h-5 w-5 transition-transform" />
+              </Link>
             </Button>
 
             <Button
@@ -273,34 +215,9 @@ const Hero = () => {
             >
               <Link href="#features">
                 <Gift className="h-5 w-5 transition-transform opacity-60" />
-                Explore Metronic
+                Tìm hiểu thêm
               </Link>
             </Button>
-          </motion.div>
-
-          {/* Loved by thousands badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-col items-center gap-2.5 mb-10"
-          >
-            <div className="flex gap-2.5">
-              <div className="flex -space-x-2 me-2.5">
-                <AnimatedTooltip items={people} />
-              </div>
-              <div className="flex items-center gap-1">
-                {[...Array(5)].map((_, idx) => (
-                  <Star
-                    key={idx}
-                    className="h-5 w-5 transition-transform opacity-60 text-yellow-500"
-                  />
-                ))}
-              </div>
-            </div>
-            <div className="text-center text-muted-foreground text-sm font-medium">
-              Trusted by thousands of enterprises
-            </div>
           </motion.div>
 
           {/* Hero Video Dialog */}

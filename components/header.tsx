@@ -16,13 +16,14 @@ import { Button } from "@/components/ui/button";
 import { DarkLogoImage, LightLogoImage } from "@/components/logo-image";
 
 const Header = () => {
-  const navItems = [
+  const navLabels = [
     "Trang chủ",
     "Dịch vụ",
     "Giá cả",
     "Câu hỏi thường gặp",
     "Liên hệ",
   ];
+  const navItems = ["Home", "Features", "Pricing", "FAQ", "Contact"];
 
   const { resolvedTheme, setTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -130,10 +131,10 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {/* Nav items */}
-            {navItems.map((item, index) => (
+            {navLabels.map((item, index) => (
               <motion.button
                 key={item}
-                onClick={() => handleNavClick(item)}
+                onClick={() => handleNavClick(navItems[index])}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: (index + 2) * 0.1 }}
@@ -152,6 +153,8 @@ const Header = () => {
                 ></span>
               </motion.button>
             ))}
+
+            {/* <Button variant="default">Get Started</Button> */}
           </nav>
 
           {/* Mobile Navigation */}
